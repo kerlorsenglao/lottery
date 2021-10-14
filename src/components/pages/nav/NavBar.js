@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Menu, Typography,message } from 'antd';
-import { Link,Redirect } from 'react-router-dom';
+import { Menu, Typography, message } from 'antd';
+import { Link, Redirect } from 'react-router-dom';
 
 
 const { Text } = Typography;
@@ -10,16 +10,16 @@ class NavBar extends Component {
         this.state = {
             current: '',
             isAuth: false,
-            logout_status : false,
+            logout_status: false,
         }
     }
 
     handleClick = e => {
         console.log('click ', e);
-        localStorage.setItem('menuActive',e.key);
+        localStorage.setItem('menuActive', e.key);
         this.setState({ current: e.key });
     };
-    
+
     logOut = () => {
         localStorage.clear();
         this.setState({
@@ -36,12 +36,12 @@ class NavBar extends Component {
         }
     }
     render() {
-        let { current,isAuth,logout_status } = this.state;
+        let { current, isAuth, logout_status } = this.state;
         var menuActive = localStorage.getItem('menuActive');
-        if(logout_status){
-            return <Redirect to="/"/>
+        if (logout_status) {
+            return <Redirect to="/" />
         }
-        if(menuActive){
+        if (menuActive) {
             current = menuActive;
         }
         return (
@@ -52,6 +52,18 @@ class NavBar extends Component {
                         <Text strong style={{ color: 'black' }}>Home</Text>
                     </Link>
                 </Menu.Item>
+                
+                {
+                !isAuth
+                    ?
+                    <Menu.Item key="login" >
+                        <Link to={{ pathname: "/login" }}>
+                            <Text strong style={{ color: 'black' }}>login</Text>
+                        </Link>
+                    </Menu.Item>
+                    : null
+
+                }
                 {
                     JSON.parse(localStorage.getItem('isAuth')) ?
                         <Menu.Item key="lottery" >
@@ -61,15 +73,6 @@ class NavBar extends Component {
                         </Menu.Item>
                         : null
                 }
-                {/* {
-                    isAuth ?
-                        <Menu.Item key="adduser" >
-                            <Link to={{ pathname: "/admin/adduser" }}>
-                                <Text strong style={{ color: 'black' }}>Add User</Text>
-                            </Link>
-                        </Menu.Item>
-                        : null
-                } */}
                 {
                     isAuth ?
                         <Menu.Item key="profile" >

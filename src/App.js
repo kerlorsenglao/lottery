@@ -9,8 +9,7 @@ function App() {
     return (
         <BrowserRouter>
             {/* <MainLayout/> */}
-            <h1>chung toi</h1>
-            {/* <Main_Layout/> */}
+            <Main_Layout/>
         </BrowserRouter>
         
     );
