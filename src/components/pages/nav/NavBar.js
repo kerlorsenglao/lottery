@@ -53,7 +53,7 @@ class NavBar extends Component {
                     </Link>
                 </Menu.Item>
                 
-                {
+                {/* {
                 !isAuth
                     ?
                     <Menu.Item key="login" >
@@ -63,7 +63,7 @@ class NavBar extends Component {
                     </Menu.Item>
                     : null
 
-                }
+                } */}
                 {
                     JSON.parse(localStorage.getItem('isAuth')) ?
                         <Menu.Item key="lottery" >
