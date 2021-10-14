@@ -1,0 +1,17 @@
+.calendar-title{
+    background-color: lightblue;
+    /* flex: 1; */
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    height: 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 3px;
+}
+.site-calendar-demo-card {
+    border: 1px solid #f0f0f0;
+    width: "100%";
+    padding: '20px';
+    /* text-align: center; */
+}
