@@ -57,42 +57,42 @@ class Vietnam extends Component {
             giai7,
         } = this.state;
         dacbiet.forEach(element => {
-            if(element.date == item){
+            if(element.date === item){
                 dacbiet_result_active = element.result;
             }
         });
         giai1.forEach(element => {
-            if(element.date == item){
+            if(element.date === item){
                 giai1_result_active = element.result;
             }
         });
         giai2.forEach(element => {
-            if(element.date == item){
+            if(element.date === item){
                 giai2_result_active.push(element.result);
             }
         });
         giai3.forEach(element => {
-            if(element.date == item){
+            if(element.date === item){
                 giai3_result_active.push(element.result);
             }
         });
         giai4.forEach(element => {
-            if(element.date == item){
+            if(element.date === item){
                 giai4_result_active.push(element.result);
             }
         });
         giai5.forEach(element => {
-            if(element.date == item){
+            if(element.date === item){
                 giai5_result_active.push(element.result);
             }
         });
         giai6.forEach(element => {
-            if(element.date == item){
+            if(element.date === item){
                 giai6_result_active.push(element.result);
             }
         });
         giai7.forEach(element => {
-            if(element.date == item){
+            if(element.date === item){
                 giai7_result_active.push(element.result);
             }
         });
@@ -113,10 +113,10 @@ class Vietnam extends Component {
         return (
             <Button key={key} style={{
                 width: "125px", margin: '5px',
-                backgroundColor: (item == default_active) ? 'wheat' : 'whitesmoke'
+                backgroundColor: (item === default_active) ? 'wheat' : 'whitesmoke'
             }}
                 onClick={() => this.clickSelect(item)}>
-                <Text strong style={{ color: (item == default_active) ? 'red' : 'black' }}>{item}</Text>
+                <Text strong style={{ color: (item === default_active) ? 'red' : 'black' }}>{item}</Text>
             </Button>
         )
     }
@@ -140,27 +140,27 @@ class Vietnam extends Component {
                 var giai7=[]; var giai7_result_active = [];
                 if(all.length > 0){
                     all.forEach(element => {
-                        if(element.type == 0){
+                        if(element.type === 0){
                             dacbiet.push(element);
                         }
-                        if(element.type == 1){
+                        if(element.type === 1){
                             giai1.push(element);
                         }
-                        if(element.type == 2){
+                        if(element.type === 2){
                             giai2.push(element);
                         }
-                        if(element.type == 3){
+                        if(element.type === 3){
                             giai3.push(element);
                         }
-                        if(element.type == 4){
+                        if(element.type === 4){
                             giai4.push(element);
-                        }if(element.type == 5){
+                        }if(element.type === 5){
                             giai5.push(element);
                         }
-                        if(element.type == 6){
+                        if(element.type === 6){
                             giai6.push(element);
                         }
-                        if(element.type == 7){
+                        if(element.type === 7){
                             giai7.push(element);
                         }
                     });
@@ -174,7 +174,7 @@ class Vietnam extends Component {
                     }
                     fiveBefore.forEach(element => {
                         history.push(element.date);
-                        if(element.date == getDateFormat(new Date())){
+                        if(element.date === getDateFormat(new Date())){
                             default_active = element.date;
                         }
                     });
@@ -183,42 +183,42 @@ class Vietnam extends Component {
                         default_active = getDateFormat(new Date());
                     }else{
                         dacbiet.forEach(element => {
-                            if(element.date == default_active){
+                            if(element.date === default_active){
                                 dacbiet_result_active = element.result;
                             }
                         });
                         giai1.forEach(element => {
-                            if(element.date == default_active){
+                            if(element.date === default_active){
                                 giai1_result_active = element.result;
                             }
                         });
                         giai2.forEach(element => {
-                            if(element.date == default_active){
+                            if(element.date === default_active){
                                 giai2_result_active.push(element.result);
                             }
                         });
                         giai3.forEach(element => {
-                            if(element.date == default_active){
+                            if(element.date === default_active){
                                 giai3_result_active.push(element.result);
                             }
                         });
                         giai4.forEach(element => {
-                            if(element.date == default_active){
+                            if(element.date === default_active){
                                 giai4_result_active.push(element.result);
                             }
                         });
                         giai5.forEach(element => {
-                            if(element.date == default_active){
+                            if(element.date === default_active){
                                 giai5_result_active.push(element.result);
                             }
                         });
                         giai6.forEach(element => {
-                            if(element.date == default_active){
+                            if(element.date === default_active){
                                 giai6_result_active.push(element.result);
                             }
                         });
                         giai7.forEach(element => {
-                            if(element.date == default_active){
+                            if(element.date === default_active){
                                 giai7_result_active.push(element.result);
                             }
                         });

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Typography, message,} from 'antd';
+import { Row, Col, Typography, message, Button } from 'antd';
 import InputDacbiet from "./input/input_dacbiet";
 import InputGiai1 from "./input/input_giai1";
 import InputGiai2 from "./input/input_giai2";
@@ -22,7 +22,12 @@ class LotteryCreate extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            password: '123456',
+            giai2: ["",""],
+            giai3: ["","","","","",""],
+            giai4: ["","","",""],
+            giai5: ["","","","","",""],
+            giai6: ["","",""],
+            giai7: ["","","",""]
         }
     }
 
@@ -47,8 +52,27 @@ class LotteryCreate extends Component {
     onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
     };
+    onCreate = () => {
+        setTimeout(() => {
+            this.setState({
+                giai2: [23654, 85962],
+                giai3: [45879, 52634, 41528, 45786, 85475, 21035],
+                giai4: [4526, 8596, 7458, 1203],
+                giai5: [4587, 5234, 1528, 4786, 5475, 2135],
+                giai6: [415, 650, 548],
+                giai7: [12, 52, 10, 11],
+            })
+        },5000);
+    }
     render() {
-        const { } = this.state;
+        const {
+            giai2,
+            giai3,
+            giai4,
+            giai5,
+            giai6,
+            giai7
+        } = this.state;
         return (
             <div className="site-layout-background"
                 style={{ minHeight: 380, }}
@@ -73,8 +97,8 @@ class LotteryCreate extends Component {
                                     }
                                 </Text>
                             </div>
-                            <div style={{height:'1px',backgroundColor:'wheat'}}></div> 
-                            <div style={{textAlign:'center'}}>
+                            <div style={{ height: '1px', backgroundColor: 'wheat' }}></div>
+                            <div style={{ textAlign: 'center' }}>
                                 <Time color='red' size={30} />
                             </div>
                         </Col>
@@ -91,16 +115,19 @@ class LotteryCreate extends Component {
                             }}>
                                 <Title level={4} strong style={{ color: 'red', paddingTop: '6px' }}>FORM INPUT</Title>
                             </div>
-                            <div style={{height:'1px',backgroundColor:'wheat'}}></div> 
+                            <div style={{ height: '1px', backgroundColor: 'wheat' }}></div>
                             <div style={{ marginLeft: '1px', marginRight: '1px' }}>
                                 <InputDacbiet />
-                                <InputGiai1/>
-                                <InputGiai2/>
-                                <InputGiai3/>
-                                <InputGiai4/>
-                                <InputGiai5/>
-                                <InputGiai6/>
-                                <InputGiai7/>
+                                <InputGiai1 />
+                                <div style={{ marginRight: '5px', paddingBottom: '4px', paddingTop: '4px', borderBottom: "1px solid #f0f0f0", textAlign: 'right' }}>
+                                    <Button type='primary' onClick={this.onCreate}>create all</Button>
+                                </div>
+                                <InputGiai2 val ={giai2}/>
+                                <InputGiai3 val={giai3} />
+                                <InputGiai4 val={giai4} />
+                                <InputGiai5 val={giai5} />
+                                <InputGiai6 val={giai6} />
+                                <InputGiai7 val={giai7} />
                             </div>
 
                             {/* <Vietnam/> */}

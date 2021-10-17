@@ -35,7 +35,7 @@ class InputGiai3 extends Component {
                     data
                 })
                     .then((res) => {
-                        
+
                         this.setState({
                             val1: val1,
                             click_save: false
@@ -58,7 +58,7 @@ class InputGiai3 extends Component {
                         data
                     })
                         .then((res) => {
-                            
+
                             this.setState({
                                 val2: val2,
                                 click_save: false
@@ -81,7 +81,7 @@ class InputGiai3 extends Component {
                             data
                         })
                             .then((res) => {
-                                
+
                                 this.setState({
                                     val3: val3,
                                     click_save: false
@@ -104,7 +104,7 @@ class InputGiai3 extends Component {
                                 data
                             })
                                 .then((res) => {
-                                    
+
                                     this.setState({
                                         val4: val4,
                                         click_save: false
@@ -148,7 +148,7 @@ class InputGiai3 extends Component {
                                     data
                                 })
                                     .then((res) => {
-                                        
+
                                         this.setState({
                                             val6: val6,
                                             click_save: false
@@ -221,10 +221,9 @@ class InputGiai3 extends Component {
         const {
             val1, val2, val3, val4, val5, val6, click_save
         } = this.state;
-
+        const { val } = this.props;
         return (
             <div style={{ borderBottom: "1px solid #f0f0f0", }}>
-
                 <Row>
                     <Col span={4}>
                         <div style={{
@@ -236,132 +235,34 @@ class InputGiai3 extends Component {
                     </Col>
                     <Col span={20}>
                         <div style={{
-                            minHeight: '50px', textAlign: 'center', paddingTop: '12px', marginLeft: "5px",
+                            minHeight: '50px', textAlign: 'center', paddingTop: '5px', marginLeft: "5px",
                             borderLeft: "1px solid #f0f0f0"
                         }}>
-                            <Form style={{ marginLeft: '20px' }}
-                                // layout='inline'
-                                onFinish={this.onFinish}
-                            >
-                                <div style={{ width: '100%', display: 'inline-flex' }}>
-                                    <div style={{ marginRight: '5px', minWidth: '30%' }}>
-                                        {
-                                            val1
-                                                ?
-                                                <div style={{ width: '100%', textAlign: 'center' }}>
-                                                    <Text strong style={{ color: 'red' }}>{val1}</Text>
-                                                </div>
-                                                :
-                                                <Form.Item
-                                                    name="val1"
-                                                >
-                                                    <Input style={{ textAlign: 'center' }} />
-                                                </Form.Item>
-                                        }
-                                    </div>
-                                    <div style={{ marginRight: '5px', minWidth: '30%' }}>
-                                        {
-                                            val2
-                                                ?
-                                                <div style={{ width: '100%', textAlign: 'center' }}>
-                                                    <Text strong style={{ color: 'red' }}>{val2}</Text>
-                                                </div>
-                                                :
-                                                <Form.Item
-                                                    name="val2"
-                                                >
-                                                    <Input style={{ textAlign: 'center' }} />
-                                                </Form.Item>
-                                        }
-                                    </div>
+                            <div style={{ width: '100%', display: 'inline-flex', paddingLeft: '5px' }}>
+                                <div style={{ marginRight: '5px', minWidth: '30%', border: "1px solid #f0f0f0", height: '30px' }}>
+                                    <Text style={{ textAlign: 'center' }}>{val[0]}</Text>
+                                </div>
+                                <div style={{ marginRight: '5px', minWidth: '30%', border: "1px solid #f0f0f0", height: '30px' }}>
+                                    <Text style={{ textAlign: 'center' }}>{val[1]}</Text>
+                                </div>
 
-                                    <div style={{ marginRight: '5px', minWidth: '30%' }}>
-                                        {
-                                            val3
-                                                ?
-                                                <div style={{ width: '100%', textAlign: 'center' }}>
-                                                    <Text strong style={{ color: 'red' }}>{val3}</Text>
-                                                </div>
-                                                :
-                                                <Form.Item
-                                                    name="val3"
-                                                >
-                                                    <Input style={{ textAlign: 'center' }} />
-                                                </Form.Item>
-                                        }
-                                    </div>
+                                <div style={{ marginRight: '5px', minWidth: '30%', border: "1px solid #f0f0f0", height: '30px' }}>
+                                    <Text style={{ textAlign: 'center' }}>{val[2]}</Text>
                                 </div>
-                                <div style={{ width: '100%', display: 'inline-flex' }}>
-                                    <div style={{ marginRight: '5px', minWidth: '30%' }}>
-                                        {
-                                            val4
-                                                ?
-                                                <div style={{ width: '100%', textAlign: 'center' }}>
-                                                    <Text strong style={{ color: 'red' }}>{val4}</Text>
-                                                </div>
-                                                :
-                                                <Form.Item
-                                                    name="val4"
-                                                >
-                                                    <Input maxLength={5} style={{ textAlign: 'center' }} />
-                                                </Form.Item>
-                                        }
-                                    </div>
-                                    <div style={{ marginRight: '5px', minWidth: '30%' }}>
-                                        {
-                                            val5
-                                                ?
-                                                <div style={{ width: '100%', textAlign: 'center' }}>
-                                                    <Text strong style={{ color: 'red' }}>{val5}</Text>
-                                                </div>
-                                                :
-                                                <Form.Item
-                                                    name="val5"
-                                                >
-                                                    <Input style={{ textAlign: 'center' }} />
-                                                </Form.Item>
-                                        }
-                                    </div>
-                                    <div style={{ marginRight: '5px', minWidth: '30%' }}>
-                                        {
-                                            val6
-                                                ?
-                                                <div style={{ width: '100%', textAlign: 'center' }}>
-                                                    <Text strong style={{ color: 'red' }}>{val6}</Text>
-                                                </div>
-                                                :
-                                                <Form.Item
-                                                    name="val6"
-                                                >
-                                                    <Input maxLength={5} style={{ textAlign: 'center' }} />
-                                                </Form.Item>
-                                        }
-                                    </div>
+                            </div>
+                            <div style={{ width: '100%', display: 'inline-flex',paddingLeft:'5px',marginTop:'2px',marginBottom:'2px' }}>
+                                <div style={{ marginRight: '5px', minWidth: '30%', border: "1px solid #f0f0f0", height: '30px' }}>
+                                    <Text style={{ textAlign: 'center' }}>{val[3]}</Text>
                                 </div>
-                                <div style={{ width: '100%', display: 'inline-flex' }}>
-                                    <div style={{ paddingRight: '5px', width: '100%' }}>
-                                        {
-                                            val1 && val2 && val3 && val4 && val5 && val6
-                                                ?
-                                                <Button type='primary' onClick={this.onUpdate} style={{ float: 'right',backgroundColor:'green' }}>
-                                                    update
-                                                </Button>
-                                                :
-                                                null
-                                        }
-                                        {
-                                            click_save
-                                                ?
-                                                <Image src={Loading} style={{ width: "20px" }} />
-                                                :
-                                                <Button type='primary' htmlType="submit" style={{ float: 'right',marginRight:'2px'}}>
-                                                    save
-                                                </Button>
-                                        }
-                                    </div>
+                                <div style={{ marginRight: '5px', minWidth: '30%', border: "1px solid #f0f0f0", height: '30px' }}>
+                                    <Text style={{ textAlign: 'center' }}>{val[4]}</Text>
+                                </div>
 
+                                <div style={{ marginRight: '5px', minWidth: '30%', border: "1px solid #f0f0f0", height: '30px' }}>
+                                    <Text style={{ textAlign: 'center'}}>{val[5]}</Text>
                                 </div>
-                            </Form>
+                            </div>
+
                         </div>
                     </Col>
                 </Row>
