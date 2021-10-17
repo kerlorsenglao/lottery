@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Typography, message } from 'antd';
+import { Menu, Typography, message, } from 'antd';
 import { Link, Redirect } from 'react-router-dom';
 
 
@@ -52,23 +52,6 @@ class NavBar extends Component {
                         <Text strong style={{ color: 'black' }}>Home</Text>
                     </Link>
                 </Menu.Item>
-                {/* <Menu.Item key="login" >
-                    <Link to={{ pathname: "/login" }}>
-                        <Text strong style={{ color: 'black' }}>login</Text>
-                    </Link>
-                </Menu.Item> */}
-
-                {
-                    !isAuth
-                        ?
-                        <Menu.Item key="login" >
-                            <Link to={{ pathname: "/login" }}>
-                                <Text strong style={{ color: 'black' }}>login</Text>
-                            </Link>
-                        </Menu.Item>
-                        : null
-
-                }
                 {
                     JSON.parse(localStorage.getItem('isAuth')) ?
                         <Menu.Item key="lottery" >
@@ -94,7 +77,6 @@ class NavBar extends Component {
                         </Menu.Item>
                         : null
                 }
-
             </Menu>
         )
     }

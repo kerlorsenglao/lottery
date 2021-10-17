@@ -88,7 +88,7 @@ class Login extends Component {
                             textAlign: 'center'
                         }}
                         >
-                            <Title level={3} style={{ paddingTop: '10px', color: 'blue' }}>Admin Login</Title>
+                            <Title level={3} style={{ paddingTop: '10px', color: 'blue' }}>Form Login</Title>
                         </div>
                         <div style={{ marginTop: '10px', padding: '10px', paddingRight: '50px', height: '100%', }}>
                             <Form

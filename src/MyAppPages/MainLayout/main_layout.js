@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Layout,Typography, Image, Row, Col } from 'antd';
+import { Layout,Typography, Image, Row, Col, Button } from 'antd';
 import lottery from '../../assets/images/lottery.png';
 import Routes from "../Router/router";
 
@@ -18,6 +18,7 @@ class Main_Layout extends Component {
                         style={{ width: "250px", marginTop: '5px' }}
                         src={lottery}
                     />
+                   
                 </Header>
                 <div style={{ height: "2px", backgroundColor: 'wheat' }}></div>
 

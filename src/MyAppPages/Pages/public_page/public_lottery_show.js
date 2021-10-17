@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Layout, Typography, Col, Menu } from 'antd';
+import { Layout, Typography, Col, Menu, Button } from 'antd';
 import LotteryShow from "../../../components/pages/form/lottery/form_show";
-
+import { Link } from "react-router-dom";
 const { Content } = Layout;
 const { Text } = Typography;
 
@@ -20,16 +20,21 @@ class Public_Show_Lottery extends Component {
                         <Menu onClick={this.handleClick} mode="horizontal"
                             style={{ borderRight: 'none', height: '39px', backgroundColor: 'red', }}>
                             <Menu.Item key="hanoi">
-                                {/* <Link to={{ pathname: "/" }}> */}
+                                <Link to={{ pathname: "/" }}>
                                     <Text strong style={{ color: 'black' }}>Home</Text>
-                                {/* </Link> */}
+                                </Link>
+                            </Menu.Item>
+                            <Menu.Item key='login'>
+                                <Link to={{ pathname: "/login" }}>
+                                    <Text strong style={{ color: 'black' }}>login</Text>
+                                </Link>
                             </Menu.Item>
                         </Menu>
                         {/* //////NavBar////// */}
                     </Col>
                 </div>
                 <Content className="site-layout" style={{ padding: '0 20px', marginTop: 1, }}>
-                    <LotteryShow/>
+                    <LotteryShow />
                 </Content>
             </div>
         )
