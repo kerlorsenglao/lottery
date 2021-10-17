@@ -52,18 +52,23 @@ class NavBar extends Component {
                         <Text strong style={{ color: 'black' }}>Home</Text>
                     </Link>
                 </Menu.Item>
-                
-                {/* {
-                !isAuth
-                    ?
-                    <Menu.Item key="login" >
-                        <Link to={{ pathname: "/login" }}>
-                            <Text strong style={{ color: 'black' }}>login</Text>
-                        </Link>
-                    </Menu.Item>
-                    : null
+                {/* <Menu.Item key="login" >
+                    <Link to={{ pathname: "/login" }}>
+                        <Text strong style={{ color: 'black' }}>login</Text>
+                    </Link>
+                </Menu.Item> */}
 
-                } */}
+                {
+                    !isAuth
+                        ?
+                        <Menu.Item key="login" >
+                            <Link to={{ pathname: "/login" }}>
+                                <Text strong style={{ color: 'black' }}>login</Text>
+                            </Link>
+                        </Menu.Item>
+                        : null
+
+                }
                 {
                     JSON.parse(localStorage.getItem('isAuth')) ?
                         <Menu.Item key="lottery" >
