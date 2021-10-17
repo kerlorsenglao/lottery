@@ -251,7 +251,7 @@ class Vietnam extends Component {
             });
     }
     componentDidMount() {
-        // this.get_all_lottery();
+        this.get_all_lottery();
     }
     render() {
         const { 
@@ -266,6 +266,7 @@ class Vietnam extends Component {
             giai7_result_active,
         } = this.state;
         return (
+            
             <div>
                 <div style={{
                     justifyItems: 'center', justifyContent: 'center', textAlign: 'center',

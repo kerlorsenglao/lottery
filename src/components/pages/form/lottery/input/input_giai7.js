@@ -19,7 +19,7 @@ class InputGiai7 extends Component {
         var date = getDateFormat(new Date());
         axios({
             method: 'GET',
-            url: `${API_URL}/giai7/${date}`,
+            url: `${API_URL}/lottery/giai7/${date}`,
         })
             .then((res) => {
                 if (res.data.data) {

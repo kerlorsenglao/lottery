@@ -97,7 +97,7 @@ class InputGiai6 extends Component {
         var date = getDateFormat(new Date());
         axios({
             method: 'GET',
-            url: `${API_URL}/giai6/${date}`,
+            url: `${API_URL}/lottery/giai6/${date}`,
         })
             .then((res) => {
                 if (res.data.data) {

@@ -23,7 +23,7 @@ class InputDacbiet extends Component {
         var date = getDateFormat(new Date());
         axios({
             method: 'GET',
-            url: `${API_URL}/dacbiet/${date}`,
+            url: `${API_URL}/lottery/dacbiet/${date}`,
         })
             .then((res) => {
                 if (res.data.data[0]) {
@@ -51,7 +51,7 @@ class InputDacbiet extends Component {
             setTimeout(() => {
                 axios({
                     method: 'POST',
-                    url: `${API_URL}/dacbiet`,
+                    url: `${API_URL}/lottery/dacbiet`,
                     //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                     data
                 })

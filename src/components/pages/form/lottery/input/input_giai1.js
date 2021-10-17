@@ -28,7 +28,7 @@ class InputGiai1 extends Component {
             }
             axios({
                 method: 'POST',
-                url: `${API_URL}/giai1`,
+                url: `${API_URL}/lottery/giai1`,
                 //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                 data
             })
@@ -48,7 +48,7 @@ class InputGiai1 extends Component {
         var date = getDateFormat(new Date());
         axios({
             method: 'GET',
-            url: `${API_URL}/giai1/${date}`,
+            url: `${API_URL}/lottery/giai1/${date}`,
         })
             .then((res) => {
                 if (res.data.data[0]) {

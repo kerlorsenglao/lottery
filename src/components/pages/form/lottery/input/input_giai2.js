@@ -20,7 +20,7 @@ class InputGiai2 extends Component {
         var date = getDateFormat(new Date());
         axios({
             method: 'GET',
-            url: `${API_URL}/giai2/${date}`,
+            url: `${API_URL}/lottery/giai2/${date}`,
         })
             .then((res) => {
                 if (res.data.data) {
@@ -63,7 +63,7 @@ class InputGiai2 extends Component {
                 // setTimeout(() => {
                     axios({
                         method: 'POST',
-                        url: `${API_URL}/giai2`,
+                        url: `${API_URL}/lottery/giai2`,
                         //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                         data
                     })
@@ -92,7 +92,7 @@ class InputGiai2 extends Component {
                     setTimeout(() => {
                         axios({
                             method: 'POST',
-                            url: `${API_URL}/giai2`,
+                            url: `${API_URL}/lottery/giai2`,
                             //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                             data
                         })

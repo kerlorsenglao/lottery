@@ -30,7 +30,7 @@ class InputGiai3 extends Component {
                 }
                 axios({
                     method: 'POST',
-                    url: `${API_URL}/giai3`,
+                    url: `${API_URL}/lottery/giai3`,
                     //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                     data
                 })
@@ -53,7 +53,7 @@ class InputGiai3 extends Component {
                     }
                     axios({
                         method: 'POST',
-                        url: `${API_URL}/giai3`,
+                        url: `${API_URL}/lottery/giai3`,
                         //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                         data
                     })
@@ -76,7 +76,7 @@ class InputGiai3 extends Component {
                         }
                         axios({
                             method: 'POST',
-                            url: `${API_URL}/giai3`,
+                            url: `${API_URL}/lottery/giai3`,
                             //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                             data
                         })
@@ -99,7 +99,7 @@ class InputGiai3 extends Component {
                             }
                             axios({
                                 method: 'POST',
-                                url: `${API_URL}/giai3`,
+                                url: `${API_URL}/lottery/giai3`,
                                 //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                                 data
                             })
@@ -122,7 +122,7 @@ class InputGiai3 extends Component {
                                 }
                                 axios({
                                     method: 'POST',
-                                    url: `${API_URL}/giai3`,
+                                    url: `${API_URL}/lottery/giai3`,
                                     //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                                     data
                                 })
@@ -143,7 +143,7 @@ class InputGiai3 extends Component {
                                 }
                                 axios({
                                     method: 'POST',
-                                    url: `${API_URL}/giai3`,
+                                    url: `${API_URL}/lottery/giai3`,
                                     //   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                                     data
                                 })
@@ -179,7 +179,7 @@ class InputGiai3 extends Component {
         var date = getDateFormat(new Date());
         axios({
             method: 'GET',
-            url: `${API_URL}/giai3/${date}`,
+            url: `${API_URL}/lottery/giai3/${date}`,
         })
             .then((res) => {
                 if (res.data.data) {
