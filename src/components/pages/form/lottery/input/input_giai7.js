@@ -170,7 +170,7 @@ class InputGiai7 extends Component {
                             minHeight: '40px', textAlign: 'center',
                             paddingTop: '15px',
                         }}>
-                            <Text strong >Giải 4</Text>
+                            <Text strong >Giải 7</Text>
                         </div>
                     </Col>
                     <Col span={20}>

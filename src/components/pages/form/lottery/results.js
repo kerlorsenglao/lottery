@@ -140,27 +140,27 @@ class Vietnam extends Component {
                 var giai7=[]; var giai7_result_active = [];
                 if(all.length > 0){
                     all.forEach(element => {
-                        if(element.type === 0){
+                        if(element.type === "0"){
                             dacbiet.push(element);
                         }
-                        if(element.type === 1){
+                        if(element.type === "1"){
                             giai1.push(element);
                         }
-                        if(element.type === 2){
+                        if(element.type === "2"){
                             giai2.push(element);
                         }
-                        if(element.type === 3){
+                        if(element.type === "3"){
                             giai3.push(element);
                         }
-                        if(element.type === 4){
+                        if(element.type === "4"){
                             giai4.push(element);
-                        }if(element.type === 5){
+                        }if(element.type === "5"){
                             giai5.push(element);
                         }
-                        if(element.type === 6){
+                        if(element.type === "6"){
                             giai6.push(element);
                         }
-                        if(element.type === 7){
+                        if(element.type === "7"){
                             giai7.push(element);
                         }
                     });

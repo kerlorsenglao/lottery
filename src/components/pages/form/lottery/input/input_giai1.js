@@ -99,7 +99,7 @@ class InputGiai1 extends Component {
                                         val
                                             ?
                                             <div style={{ width: '100%', textAlign: 'center' }}>
-                                                <Text strong style={{ color: 'red' }}>{val}</Text>
+                                                <Text strong style={{ color: 'green' }}>{val}</Text>
                                             </div>
                                             :
                                             <Form.Item style={{ width: '30%' }}

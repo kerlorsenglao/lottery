@@ -55,15 +55,29 @@ class LotteryCreate extends Component {
     onCreate = () => {
         setTimeout(() => {
             this.setState({
-                giai2: [23654, 85962],
-                giai3: [45879, 52634, 41528, 45786, 85475, 21035],
-                giai4: [4526, 8596, 7458, 1203],
-                giai5: [4587, 5234, 1528, 4786, 5475, 2135],
-                giai6: [415, 650, 548],
-                giai7: [12, 52, 10, 11],
+                giai2: [this.ranDom(10000,99999), this.ranDom(10000,99999)],
+                giai3: [this.ranDom(10000,99999), 
+                        this.ranDom(10000,99999), 
+                        this.ranDom(10000,99999), 
+                        this.ranDom(10000,99999), 
+                        this.ranDom(10000,99999), 
+                        this.ranDom(10000,99999)],
+                giai4: [this.ranDom(1000,9999),this.ranDom(1000,9999),
+                        this.ranDom(1000,9999),this.ranDom(1000,9999)],
+                giai5: [this.ranDom(1000,9999),this.ranDom(1000,9999),
+                        this.ranDom(1000,9999),this.ranDom(1000,9999),
+                        this.ranDom(1000,9999),this.ranDom(1000,9999)],
+                giai6: [this.ranDom(100,999),this.ranDom(100,999),this.ranDom(100,999)],
+                giai7: [this.ranDom(10,99),this.ranDom(10,99),
+                        this.ranDom(10,99), this.ranDom(10,99)],
             })
-        },5000);
+        },0);
     }
+    ranDom=(min, max)=>{
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+      }
     render() {
         const {
             giai2,
