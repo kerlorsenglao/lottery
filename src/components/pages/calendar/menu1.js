@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu,Typography} from 'antd';
+import { Menu,Typography,Button} from 'antd';
 import { RightOutlined } from '@ant-design/icons';
 
 import './styles.css';
@@ -25,27 +25,14 @@ class Menu1 extends Component {
                 <div style={{ height: '38px', backgroundColor: 'lightblue', textAlign: 'center', paddingTop: '8px' }}>
                     <Text strong style={{}}>XỔ SỐ MIỀN BẮC</Text>
                 </div>
-                <div style={{ paddingTop: '5px', paddingLeft: '20px', paddingRight: '20px' }}>
-                    <Menu onClick={this.handleClick} selectedKeys={[current]} mode='vertical' style={{ borderRight: 'none' }}>
-                        <Menu.Item key="hanoi" icon={<RightOutlined />}>
-                            <Text strong>Hà Nội</Text>
-                        </Menu.Item>
-                        <Menu.Item key="haiphong" icon={<RightOutlined />}>
-                            <Text strong>Hải Phòng</Text>
-                        </Menu.Item>
-                        <Menu.Item key="bacninh" icon={<RightOutlined />}>
-                            <Text strong>Bắc Ninh</Text>
-                        </Menu.Item>
-                        <Menu.Item key="namdinh" icon={<RightOutlined />}>
-                            <Text strong>Nam Định</Text>
-                        </Menu.Item>
-                        <Menu.Item key="quangninh" icon={<RightOutlined />}>
-                            <Text strong>Quảng Ninh</Text>
-                        </Menu.Item>
-                        <Menu.Item key="thaibinh" icon={<RightOutlined />}>
-                            <Text strong>Thái Bình</Text>
-                        </Menu.Item>
-                    </Menu>
+                <div style={{ paddingTop: '5px', paddingLeft: '10px', paddingRight: '10px',
+                    textAlign:'center',paddingBottom:'5px' }}>
+                    <Button style={{width:'120px',margin:'2px'}}>Ha Noi</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Hai Phong</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Bac Ninh</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Nam Dinh</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Quang Ninh</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Thai Binh</Button>
                 </div>
             </div>
         )

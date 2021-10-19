@@ -10,18 +10,21 @@ import Create_Lottery from "../Pages/private_page/add_lottery";
 // import Add_User from "../Pages/private_page/add_user";
 import LogIn from "../Pages/public_page/LogIn";
 import ProtectedRoute from "./protected_route";
+import PublicRoute from "./public_route";
 import Profile from "../Pages/private_page/profile_user"
 
 class Routes extends Component {
     render() {
         return (
             <Switch>
-                <Route path="/" exact component={Public_Show_Lottery}/>
-                <Route path="/login" component={LogIn}/>
-                <ProtectedRoute path="/admin" exact component={Private_Lottery_Show}/>
-                <ProtectedRoute path="/admin/lottery" component={Create_Lottery}/>
+                {/* <Route path="/" exact component={Public_Show_Lottery}/> */}
+                {/* <Route path="/login" component={LogIn}/> */}
+                <PublicRoute path="/admin" component={LogIn}/>
+                <PublicRoute path="/" exact component={Public_Show_Lottery}/>
+                <ProtectedRoute path="/home" exact component={Private_Lottery_Show}/>
+                <ProtectedRoute path="/lottery" component={Create_Lottery}/>
                 {/* <ProtectedRoute path="/admin/adduser" component={Add_User}/> */}
-                <ProtectedRoute path="/admin/profile" component={Profile}/>
+                <ProtectedRoute path="/profile" component={Profile}/>
                 {/* <Route path="/admin" exact component={Private_Lottery_Show}/> */}
                 {/* <Route path="/admin/lottery" exact component={Create_Lottery}/> */}
                 {/* <Route path="/admin/adduser" exact component={Add_User}/> */}

@@ -67,7 +67,7 @@ class Login extends Component {
     render() {
         const {login_status } = this.state;
         if(login_status){
-            return <Redirect to='/admin'/>
+            return <Redirect to='/home'/>
         }
         return (
             <div style={{ marginTop: '40px', minHeight: '350px' }}>
@@ -90,7 +90,7 @@ class Login extends Component {
                         >
                             <Title level={3} style={{ paddingTop: '10px', color: 'blue' }}>Form Login</Title>
                         </div>
-                        <div style={{ marginTop: '10px', padding: '10px', paddingRight: '50px', height: '100%', }}>
+                        <div style={{ marginTop: '10px', padding: '10px', paddingRight: '15px', height: '100%', }}>
                             <Form
                                 name="basic"
                                 labelCol={{ span: 8 }}
@@ -118,7 +118,7 @@ class Login extends Component {
                                 </Form.Item>
 
                                 <Form.Item wrapperCol={{ offset: 8, span: 15 }}>
-                                    <Button type="primary" htmlType="submit">
+                                    <Button type="primary" htmlType="submit" style={{width:'150px'}}>
                                         LogIn
                                     </Button>
                                 </Form.Item>

@@ -24,11 +24,11 @@ class Public_Show_Lottery extends Component {
                                     <Text strong style={{ color: 'black' }}>Home</Text>
                                 </Link>
                             </Menu.Item>
-                            <Menu.Item key='login'>
-                                <Link to={{ pathname: "/login" }}>
+                            {/* <Menu.Item key='login'>
+                                <Link to={{ pathname: "/admin" }}>
                                     <Text strong style={{ color: 'black' }}>login</Text>
                                 </Link>
-                            </Menu.Item>
+                            </Menu.Item> */}
                         </Menu>
                         {/* //////NavBar////// */}
                     </Col>

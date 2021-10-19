@@ -27,10 +27,10 @@ class LotteryShow extends Component {
                     <Row>
                         <Col xs={{ span: 24, offset: 0 ,maxHeight:0 }}
                             md={{ span: 8, offset: 0 }}
-                            lg={{ span: 6, offset: 3 }} //Calendar
+                            lg={{ span: 5, offset: 3 }} //Calendar
                             // lg={{ span: 5, offset: 3 }} //Menu1
                             style={{
-                                backgroundColor: "white", maxHeight: '360px',
+                                backgroundColor: "white", maxHeight: '190px',
                                 marginTop: '4px', marginBottom: '15px',
                             }}>
                             {/* <Calendars/> */}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Menu, Typography, message, } from 'antd';
+import { Menu, Typography, message, Button, } from 'antd';
 import { Link, Redirect } from 'react-router-dom';
+import LotteryCreate from '../form/lottery/form_crud';
 
 
 const { Text } = Typography;
@@ -36,7 +37,7 @@ class NavBar extends Component {
         }
     }
     render() {
-        let { current, isAuth, logout_status } = this.state;
+        let { current, isAuth, logout_status,Array } = this.state;
         var menuActive = localStorage.getItem('menuActive');
         if (logout_status) {
             return <Redirect to="/" />
@@ -45,38 +46,32 @@ class NavBar extends Component {
             current = menuActive;
         }
         return (
-            <Menu onClick={this.handleClick} selectedKeys={[current]} mode="horizontal"
+            <Menu onClick={this.handleClick}  mode="horizontal" defaultSelectedKeys={[current]}
                 style={{ borderRight: 'none', height: '39px', backgroundColor: 'red', }}>
-                <Menu.Item key="home">
-                    <Link to={{ pathname: "/admin" }}>
-                        <Text strong style={{ color: 'black' }}>Home</Text>
-                    </Link>
+                <Menu.Item key="home" style={{fontWeight:'bold'}}>
+                    <Link to={{ pathname: "/home" }}>Home</Link>
                 </Menu.Item>
-                {
-                    JSON.parse(localStorage.getItem('isAuth')) ?
-                        <Menu.Item key="lottery" >
-                            <Link to={{ pathname: "/admin/lottery" }}>
-                                <Text strong style={{ color: 'black' }}>Create Lottery</Text>
-                            </Link>
-                        </Menu.Item>
-                        : null
-                }
-                {
-                    isAuth ?
-                        <Menu.Item key="profile" >
-                            <Link to={{ pathname: "/admin/profile" }}>
-                                <Text strong style={{ color: 'black' }}>My Profile</Text>
-                            </Link>
-                        </Menu.Item>
-                        : null
-                }
-                {
-                    isAuth ?
-                        <Menu.Item style={{ paddingBottom: '10px' }} onClick={this.logOut}>
-                            <Text strong style={{ color: 'black' }}>Log Out</Text>
-                        </Menu.Item>
-                        : null
-                }
+                <Menu.Item key="lottery" style={{fontWeight:'bold'}}>
+                    <Link to={{ pathname: "/lottery" }} >
+                        Create
+                    </Link>
+                    {/* <Link to={{ pathname: "/admin/lottery" }}>
+                        <Text strong style={{ color: 'black' }}>Create Lottery</Text>
+                    </Link> */}
+                </Menu.Item>
+                <Menu.Item key="profile" style={{fontWeight:'bold'}}>
+                    <Link to={{ pathname: "/profile" }}>
+                        Profile
+                    </Link>
+
+                    {/* <Link to={{ pathname: "/admin/profile" }}>
+                        <Text strong style={{ color: 'black' }}>My Profile</Text>
+                    </Link> */}
+                </Menu.Item>
+                <Menu.Item style={{ paddingBottom: '10px' }} onClick={this.logOut}>
+                    Log out
+                    {/* <Text strong style={{ color: 'black' }}>Log Out</Text> */}
+                </Menu.Item>
             </Menu>
         )
     }
