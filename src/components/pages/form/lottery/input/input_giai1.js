@@ -123,9 +123,13 @@ class InputGiai1 extends Component {
                                             click_save ?
                                                 <Image src={Loading} style={{ width: "20px" }} />
                                                 :
-                                                <Button type='primary' htmlType="submit" style={{ float: 'right', marginRight: "2px" }}>
-                                                    save
-                                                </Button>
+                                                val
+                                                    ?
+                                                    null
+                                                    :
+                                                    <Button type='primary' htmlType="submit" style={{ float: 'right', marginRight: "2px" ,width:'73px'}}>
+                                                        save
+                                                    </Button>
 
                                         }
                                     </div>

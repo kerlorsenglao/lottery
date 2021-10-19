@@ -12,6 +12,7 @@ import Giai4 from '../../../lotterise/giai4';
 import Giai5 from '../../../lotterise/giai5';
 import Giai6 from '../../../lotterise/giai6';
 import Giai7 from '../../../lotterise/giai7';
+import { jsxAttribute } from '@babel/types';
 
 
 const { Text, Title } = Typography;

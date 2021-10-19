@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { API_URL } from "../../../../../API/api_url";
 import { getDateFormat } from "../../../../../helpers/Helper";
-import { Input, Row, Col, Typography, Button, Form,Image } from 'antd';
+import { Input, Row, Col, Typography, Button, Form, Image } from 'antd';
 import Loading from '../../../../../assets/images/loading.gif';
 
 const { Text } = Typography;
@@ -120,7 +120,7 @@ class InputDacbiet extends Component {
                                         {
                                             val
                                                 ?
-                                                <Button type='primary' onClick={this.onUpdate} style={{ float: 'right',backgroundColor:'green' }}>
+                                                <Button type='primary' onClick={this.onUpdate} style={{ float: 'right', backgroundColor: 'green' }}>
                                                     update
                                                 </Button>
                                                 : null
@@ -130,9 +130,13 @@ class InputDacbiet extends Component {
                                                 ?
                                                 <Image src={Loading} style={{ width: "20px" }} />
                                                 :
-                                                <Button type='primary' htmlType="submit" style={{ float: 'right',marginRight:'2px' }}>
-                                                    save
-                                                </Button>
+                                                val
+                                                    ?
+                                                    null
+                                                    :
+                                                    <Button type='primary' htmlType="submit" style={{ float: 'right', marginRight: '2px',width:'73px' }}>
+                                                        save
+                                                    </Button>
                                         }
                                     </div>
                                 </div>

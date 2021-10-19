@@ -8,7 +8,7 @@ class NavBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            current: '',
+            current: 'home',
             isAuth: false,
             logout_status: false,
         }
