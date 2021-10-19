@@ -158,8 +158,8 @@ class LotteryCreate extends Component {
                     // alert('dacbiet:' + dacbiet[0].result + 'giai1:' + giai1[0].result);
                     this.setState({
                         show_create: false,
-                        giai0: dacbiet[0].length > 0 ? dacbiet[0].result : "",
-                        giai1: giai1[0].length > 0 ? giai1[0].result : "",
+                        giai0: dacbiet[0] ? dacbiet[0].result : "",
+                        giai1: giai1[0] ? giai1[0].result : "",
                         giai2: [
                             giai2[0] ?giai2[0].result : "", 
                             giai2[1] ?giai2[1].result : ""
