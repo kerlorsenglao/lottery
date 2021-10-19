@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col } from 'antd';
 // import Calendars from '../../calendar/calendar';
 import Menu1 from "../../calendar/menu1";
-import Vietnam from "./results";
+import Result from "./results";
 
 
 
@@ -43,7 +43,7 @@ class LotteryShow extends Component {
                                 backgroundColor: 'white', minHeight: '600px',
                                 marginTop: '4px'
                             }}>
-                            <Vietnam/>
+                            <Result/>
                         </Col>
                     </Row>
                 </div>

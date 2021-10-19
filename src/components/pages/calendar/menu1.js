@@ -27,12 +27,12 @@ class Menu1 extends Component {
                 </div>
                 <div style={{ paddingTop: '5px', paddingLeft: '10px', paddingRight: '10px',
                     textAlign:'center',paddingBottom:'5px' }}>
-                    <Button style={{width:'120px',margin:'2px'}}>Ha Noi</Button>
-                    <Button style={{width:'120px',margin:'2px'}}>Hai Phong</Button>
-                    <Button style={{width:'120px',margin:'2px'}}>Bac Ninh</Button>
-                    <Button style={{width:'120px',margin:'2px'}}>Nam Dinh</Button>
-                    <Button style={{width:'120px',margin:'2px'}}>Quang Ninh</Button>
-                    <Button style={{width:'120px',margin:'2px'}}>Thai Binh</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Hà Nội</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Hải Phòng</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Bắc Ninh</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Năm Định</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Quảng Ninh</Button>
+                    <Button style={{width:'120px',margin:'2px'}}>Thái Bình</Button>
                 </div>
             </div>
         )
